@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bayzat Pricing Table</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .feature-table {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+    .feature-table th,
+    .feature-table td {
+      border: none;
+      text-align: center;
+      word-break: break-word;
+      white-space: normal;
+    }
+    .feature-table th:first-child,
+    .feature-table td:first-child {
+      text-align: left;
+    }
+    .highlight-col {
+      background-color: #f4ecff;
+      border-left: 2px solid #b388f0;
+      border-right: 2px solid #b388f0;
+    }
+    .feature-table tbody tr:nth-child(even) td {
+      background-color: #f9f9f9;
+    }
+    .feature-table tbody tr:nth-child(odd) td {
+      background-color: #ffffff;
+    }
+    .feature-category-row {
+      background-color: #f4ecff !important;
+      font-weight: 600;
+      color: #4a2960;
+    }
+    .rotate-icon {
+      transform: rotate(90deg);
+    }
+    .hero-section {
+      background-color: #7a43ea;
+      color: white;
+    }
+    .badge-promo {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    .price-value {
+      font-size: 1.25rem;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+    .price-unit {
+      font-size: 0.875rem;
+      color: #6c757d;
+    }
+    .addon-card {
+      border: 2px solid #dee2e6;
+      background-color: #f9f9fb;
+      transition: all 0.3s ease-in-out;
+      border-radius: 1rem;
+    }
+    .addon-checkbox:checked ~ div {
+      border-color: #7a43ea !important;
+    }
+    .addon-checkbox:checked {
+      accent-color: #7a43ea;
+    }
+    @media (max-width: 768px) {
+      .feature-table thead tr {
+        flex-direction: column !important;
+      }
+      .feature-table thead tr th {
+        width: 100% !important;
+        margin-bottom: 1rem;
+      }
+    }
+    @media print {
+      .feature-table th,
+      .feature-table td {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+      }
+    }<style>
+    .bg-light-purple {
+      background-color: #f4ecff !important;
+      color: #4a2960;
+    }
+    .category-row {
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .category-row:hover {
+      background-color: #e8ddfa !important;
+    }.tooltip-inner {
+  text-align: left;
+  max-width: 300px;
+  padding: 12px 16px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero-section text-center py-5">
+    <div class="container">
+      <h1 class="fw-bold">Choose the Perfect Plan for Your Needs</h1>
+      <p>Transparent pricing with no hidden fees. All plans include core features with premium options for growing businesses.</p>
+      <div class="badge-promo px-4 py-2 rounded-pill d-inline-block fw-semibold">
+        Save up to 20% with multi-year contract
+      </div>
+    </div>
+  </section>
+
+  <!-- Employee Count Selector -->
+  <section class="py-4 bg-white border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap gap-3 align-items-center">
+        <label for="employeeCount" class="form-label fw-semibold mb-0">Employee Count</label>
+        <select id="employeeCount" class="form-select rounded-pill px-3 py-2 shadow-sm border-secondary" style="width: 120px;">
+          <option>1 - 10</option>
+          <option>11 - 25</option>
+          <option>26 - 50</option>
+          <option>51 - 100</option>
+          <option>101 - 150</option>
+          <option>151 - 200</option>
+          <option>201 - 300</option>
+          <option>301 - 500</option>
+          <option>501+</option>
+        </select>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- PRICING PLAN TABLE -->
+<section class="container-fluid mt-0 mb-4">
+    <div class="table-responsive px-0">
+      <table class="table feature-table text-start">
+        <thead class="align-top sticky-header">
+          <tr class="d-flex justify-content-start flex-nowrap px-2" style="gap: 1rem;">
+            <th class="text-start" style="min-width: 200px;"></th>
+  
+            <!-- Essential Plan -->
+            <th class="p-4 rounded-4 shadow-sm text-start flex-grow-1" style="background-color: #f5f5f7; font-family: 'Inter';">
+              <div class="mb-2">
+                <span class="badge bg-white text-dark fw-medium px-3 py-1 rounded-pill" style="font-size: 0.75rem;">For small teams</span>
+              </div>
+              <div class="fw-semibold mb-2" style="font-size: 1.375rem; letter-spacing: -0.2px;">Essential</div>
+              <p class="mb-3 text-secondary">Essential features for small teams getting started</p>
+              <div class="plan-price fw-bold mb-1" style="font-size: 5.5rem;">AED99</div>
+
+            <p></p>
+              <button class="btn btn-outline-primary w-100 rounded-pill fw-medium py-2">Choose Essential</button>
+            </th>
+  
+            <!-- Enhanced Plan -->
+            <th class="p-4 rounded-4 shadow-sm text-start flex-grow-1" style="background-color: #f5f5f7; font-family: 'Inter';">
+              <div class="mb-2">
+                <span class="badge bg-white text-dark fw-medium px-3 py-1 rounded-pill" style="font-size: 0.75rem;">For growing teams</span>
+              </div>
+              <div class="fw-semibold mb-2" style="font-size: 1.375rem;">Enhanced</div>
+              <p class="mb-3 text-secondary">Advanced tools for growing businesses</p>
+              <div class="plan-price fw-bold mb-1" style="font-size: 2rem;">AED99</div>              <p></p>
+              <button class="btn btn-outline-primary w-100 rounded-pill fw-medium py-2">Choose Enhanced</button>
+            </th>
+  
+            <!-- Premium Plan -->
+            <th class="position-relative p-4 rounded-4 shadow-sm text-start flex-grow-1" style="background-color: #EFE4FF; font-family: 'Inter';">
+              <div class="position-absolute top-0 end-0 m-3" style="width: 32px; height: 32px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#f7b731" viewBox="0 0 16 16">
+                  <path d="M3 5l3.5 3L8 2l1.5 6L13 5l-1.5 8h-7L3 5z"/>
+                </svg>
+              </div>
+              <div class="mb-2">
+                <span class="badge bg-white text-primary fw-medium px-3 py-1 rounded-pill" style="font-size: 0.75rem;">Most Popular</span>
+              </div>
+              <div class="fw-semibold mb-2" style="font-size: 1.375rem;">Premium</div>
+              <p class="mb-3 text-secondary">Complete solution for established companies</p>
+              <div class="plan-price fw-bold mb-1" style="font-size: 2rem;">AED99</div>              <p></p>
+
+              <button class="btn btn-primary w-100 rounded-pill fw-medium py-2">Choose Premium</button>
+            </th>
+  
+            <!-- Enterprise Plan -->
+            <th class="p-4 rounded-4 shadow-sm text-start flex-grow-1" style="background-color: #f5f5f7; font-family: 'Inter';">
+              <div class="mb-2">
+                <span class="badge bg-white text-dark fw-medium px-3 py-1 rounded-pill" style="font-size: 0.75rem;">For large organizations</span>
+              </div>
+              <div class="fw-semibold mb-2" style="font-size: 1.375rem;">Enterprise</div>
+              <p class="mb-3 text-secondary">Enterprise-grade for maximum performance</p>
+              <div class="plan-price fw-bold mb-1" style="font-size: 2rem;">AED99</div>              <p></p>
+
+              <button class="btn btn-outline-primary w-100 rounded-pill fw-medium py-2">Choose Enterprise</button>
+            </th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </section>
+  
+        </thead>
+        <tbody>
+  
+<!-- FEATURE COMPARISON TABLE -->
+<section class="container-fluid my-4">
+    <div class="table-responsive">
+      <table class="table text-start align-top feature-table">
+        <colgroup>
+          <col style="width: 15%;">
+          <col style="width: 20%;">
+          <col style="width: 20%;">
+          <col style="width: 20%;">
+          <col style="width: 21.5%;">
+        </colgroup>
+        <thead style="display: none;">
+          <tr>
+            <th>Feature</th>
+            <th>Essential</th>
+            <th>Enhanced</th>
+            <th>Premium</th>
+            <th>Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+  
+          <tr class="category-row bg-light-purple" data-bs-toggle="collapse" data-bs-target=".recordsFeatures"><td colspan="5">▶ RECORDS MANAGEMENT</td></tr>
+          <tr class="collapse recordsFeatures"><td>Digital Business Cards</td><td>✓</td><td>✓</td><td class="highlight-col">✓</td><td>✓</td></tr>
+          <tr class="collapse recordsFeatures"><td>Employee Records</td><td>✓</td><td>✓</td><td class="highlight-col">✓</td><td>✓</td></tr>
+          <tr class="collapse recordsFeatures"><td>Company Records</td><td>✓</td><td>✓</td><td class="highlight-col">✓</td><td>✓</td></tr>
+          <tr class="collapse recordsFeatures"><td>Custom Fields</td><td>✗</td><td>✓</td><td class="highlight-col">✓</td><td>✓</td></tr>
+          <tr class="collapse recordsFeatures"><td>Letter Requests</td><td>✗</td><td>✗</td><td class="highlight-col">✓</td><td>✓</td></tr>
+          <tr class="collapse recordsFeatures"><td>Company Assets</td><td>✗</td><td>✓</td><td class="highlight-col">✓</td><td>✓</td></tr>
+  
+          <tr class="category-row bg-light-purple" data-bs-toggle="collapse" data-bs-target=".selfServiceFeatures"><td colspan="5">▶ EMPLOYEE SELF SERVICE</td></tr>
+          <tr class="collapse selfServiceFeatures"><td>Employee Self Service Portal</td><td>✓</td><td>✓</td><td class="highlight-col">✓</td><td>✓</td></tr>
+  
+          <tr class="category-row bg-light-purple" data-bs-toggle="collapse" data-bs-target=".leaveFeatures">
+            <td colspan="5">▶ LEAVE MANAGEMENT</td>
+          </tr>
+          
+          <tr class="collapse leaveFeatures">
+            <td class="text-start ps-5">Basic Leaves Management</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td class="highlight-col">✓</td>
+            <td>✓</td>
+          </tr>
+          
+          <tr class="collapse leaveFeatures">
+            <td class="text-start ps-5">
+              <span 
+  data-bs-toggle="tooltip" 
+  data-bs-html="true" 
+  data-bs-placement="top" 
+  title="
+    <div class='custom-tooltip'>
+      • Custom eligibility rules based on tenure, role, or location<br>
+      • Variable accrual rules (monthly, quarterly, annually, pro-rata)<br>
+      • Carry-forward limits and expiry rules<br>
+      • Blackout dates and leave restrictions during critical periods<br>
+      • Bulk leave uploads or edits <br>
+      • Custom approval flows
+    </div>
+  ">
+  Advanced Leave Management
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6c757d" class="bi bi-info-circle ms-1" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 .875-.252 1.01-.598l.088-.416c.076-.347.223-.497.45-.53l.088-.012.082-.38-1.272-.287zm-.81-2.29c-.369 0-.662.287-.662.653 0 .366.293.653.662.653.37 0 .663-.287.663-.653 0-.366-.293-.653-.663-.653z"/>
+  </svg>
+</span>
+            </td>
+            <td>✗</td>
+            <td>✗</td>
+            <td class="highlight-col">✓</td>
+            <td>✓</td>
+          </tr>
+            
+          <tr class="category-row bg-light-purple" data-bs-toggle="collapse" data-bs-target=".attendanceFeatures">
+            <td colspan="5">▶ ATTENDANCE</td>
+          </tr>
+          
+          <tr class="collapse attendanceFeatures">
+            <td class="text-start ps-5">Basic Attendance</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td class="highlight-col">✓</td>
+            <td>✓</td>
+          </tr>
+          
+          <tr class="collapse attendanceFeatures">
+            <td class="text-start ps-5">Multi-Site Visits</td>
+            <td>✗</td>
+            <td>✗</td>
+            <td class="highlight-col">✓</td>
+            <td>✓</td>
+          </tr>
+          
+          <tr class="collapse attendanceFeatures">
+            <td class="text-start ps-5">
+              <span 
+                data-bs-toggle="tooltip" 
+                data-bs-html="true" 
+                data-bs-placement="top" 
+                title="
+                  • Automated regularization workflows for missed punches<br>
+                  • Deduction and overtime policies linked to attendance<br>
+                  • Support for flexible work timings and shift schedules<br>
+                  • Timesheet integration for payroll and productivity tracking<br>
+                  • Multi-level thresholds for late arrival, early departure, and absences<br>
+                  • Payroll integration for accurate salary processing<br>
+                  • Biometric device integration for secure tracking
+                ">
+                Advanced Attendance Management
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6c757d" class="bi bi-info-circle ms-1" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 .875-.252 1.01-.598l.088-.416c.076-.347.223-.497.45-.53l.088-.012.082-.38-1.272-.287zm-.81-2.29c-.369 0-.662.287-.662.653 0 .366.293.653.662.653.37 0 .663-.287.663-.653 0-.366-.293-.653-.663-.653z"/>
+                </svg>
+              </span>
+            </td>
+            <td>✗</td>
+            <td>✗</td>
+            <td class="highlight-col">✓</td>
+            <td>✓</td>
+          </tr>
+            
+          <tr class="category-row bg-light-purple" data-bs-toggle="collapse" data-bs-target=".shiftFeatures">
+            <td colspan="5">▶ SHIFT SCHEDULING</td>
+          </tr>
+          
+          <tr class="collapse shiftFeatures">
+            <td class="text-start ps-5">Basic Shift Scheduling</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td class="highlight-col">✓</td>
+            <td>✓</td>
+          </tr>
+          
+          <tr class="collapse shiftFeatures">
+            <td class="text-start ps-5">
+              <span 
+                data-bs-toggle="tooltip" 
+                data-bs-html="true" 
+                data-bs-placement="top" 
+                title="
+                  • Split shift support for multiple work blocks<br>
+                  • Bulk shift management (create, copy, edit, delete)<br>
+                  • Collaborative scheduling by multiple planners per location or work center
+                ">
+                Advanced Shift Scheduling
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6c757d" class="bi bi-info-circle ms-1" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 .875-.252 1.01-.598l.088-.416c.076-.347.223-.497.45-.53l.088-.012.082-.38-1.272-.287zm-.81-2.29c-.369 0-.662.287-.662.653 0 .366.293.653.662.653.37 0 .663-.287.663-.653 0-.366-.293-.653-.663-.653z"/>
+                </svg>
+              </span>
+            </td>
+            <td>✗</td>
+            <td>✗</td>
+            <td class="highlight-col">✓</td>
+            <td>✓</td>
+          </tr>
+          
+
+  <tr class="category-row bg-light-purple" data-bs-toggle="collapse" data-bs-target=".timesheetFeatures"><td colspan="5">▶ TIMESHEETS</td></tr>
+          <tr class="collapse timesheetFeatures"><td>Timesheets</td><td>✗</td><td>✗</td><td class="highlight-col">✓</td><td>✓</td></tr>
+
+          <tr class="category-row bg-light-purple" data-bs-toggle="collapse" data-bs-target=".payrollFeatures">
+            <td colspan="5">▶ PAYROLL</td>
+          </tr>
+          
+          <tr class="collapse payrollFeatures">
+            <td class="text-start ps-5">Payroll Management</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td class="highlight-col">✓</td>
+            <td>✓</td>
+          </tr>
+          
+          <tr class="collapse payrollFeatures">
+            <td class="text-start ps-5">Payroll Processing</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td class="highlight-col">✓</td>
+            <td>✓</td>
+          </tr>
+          
+          <tr class="collapse payrollFeatures">
+            <td class="text-start ps-5">Flexible Benefits (Air Tickets & Loans)</td>
+            <td>✗</td>
+            <td>✗</td>
+            <td class="highlight-col">✓</td>
+            <td>✓</td>
+          </tr>
+          
+          <tr class="collapse payrollFeatures">
+            <td class="text-start ps-5">Accounting Integrations</td>
+            <td>✗</td>
+            <td>✓</td>
+            <td class="highlight-col">✓</td>
+            <td>✓</td>
+          </tr>
+          
+          <tr class="collapse payrollFeatures">
+            <td class="text-start ps-5">Work Expenses</td>
+            <td>✗</td>
+            <td>✗</td>
+            <td class="highlight-col">✓</td>
+            <td>✓</td>
+          </tr>
+          
+          <tr class="collapse payrollFeatures">
+            <td class="text-start ps-5">
+              <span 
+                data-bs-toggle="tooltip" 
+                data-bs-html="true" 
+                data-bs-placement="top" 
+                title="
+                  • Custom SIF file generation for WPS or bank formats<br>
+                  • Flexible payroll cycles for different employee groups<br>
+                  • Multi-level approval workflows for payroll actions<br>
+                  • Multi-tenancy support for handling multiple entities<br>
+                  • Cost centre apportionment for precise cost tracking<br>
+                  • Accrual and provisional payroll reporting<br>
+                  • Payroll variance analysis to detect anomalies<br>
+                  • Integration with time and attendance for accurate payouts
+                ">
+                Advanced Payroll Management
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#6c757d" class="bi bi-info-circle ms-1" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 .875-.252 1.01-.598l.088-.416c.076-.347.223-.497.45-.53l.088-.012.082-.38-1.272-.287zm-.81-2.29c-.369 0-.662.287-.662.653 0 .366.293.653.662.653.37 0 .663-.287.663-.653 0-.366-.293-.653-.663-.653z"/>
+                </svg>
+              </span>
+            </td>
+            <td>✗</td>
+            <td>✗</td>
+            <td class="highlight-col">✓</td>
+            <td>✓</td>
+          </tr>
+          
+  
+          
+          <tr class="category-row bg-light-purple" data-bs-toggle="collapse" data-bs-target=".talentFeatures"><td colspan="5">▶ TALENT & ENGAGEMENT</td></tr>
+           <tr class="collapse talentFeatures"><td>News Feed, Announcements</td><td>✓</td><td>✓</td><td class="highlight-col">✓</td><td>✓</td></tr>
+           <tr class="collapse talentFeatures"><td>Onboarding and Offboarding </td><td>✗</td><td>✗</td><td class="highlight-col">✓</td><td>✓</td></tr>
+           <tr class="collapse talentFeatures"><td>Performance Management</td><td>✗</td><td>✗</td><td class="highlight-col">✓</td><td>✓</td></tr>
+          <tr class="collapse talentFeatures"><td>Surveys</td><td>✗</td><td>✗</td><td class="highlight-col">✓</td><td>✓</td></tr>
+
+          <tr class="category-row bg-light-purple" data-bs-toggle="collapse" data-bs-target=".benefitsFeatures"><td colspan="5">▶ EMPLOYEE BENEFITS</td></tr>
+          <tr class="collapse benefitsFeatures"><td>Health Services</td><td>✗</td><td>✗</td><td class="highlight-col">✓</td><td>✓</td></tr>
+          <tr class="collapse benefitsFeatures"><td>Perks</td><td>✗</td><td>✓</td><td class="highlight-col">✓</td><td>✓</td></tr>
+          <tr class="collapse benefitsFeatures"><td>Wellness Hub</td><td>✗</td><td>✗</td><td class="highlight-col">✗</td><td>✓</td></tr>
+
+  <tr class="category-row bg-light-purple" data-bs-toggle="collapse" data-bs-target=".aiFeatures"><td colspan="5">▶ BAYZAT AI</td></tr>
+          <tr class="collapse aiFeatures"><td>AI Assistant</td><td>✓</td><td>✓</td><td class="highlight-col">✓</td><td>✓</td></tr>
+          <tr class="collapse aiFeatures"><td>AI Reports</td><td>✗</td><td>✓</td><td class="highlight-col">✓</td><td>✓</td></tr>
+          <tr class="collapse aiFeatures"><td>K-Hub Personal Spaces</td><td>✓</td><td>✓</td><td class="highlight-col">✓</td><td>✓</td></tr>
+          <tr class="collapse aiFeatures"><td>K-Hub Shared Spaces</td><td>✗</td><td>✗</td><td class="highlight-col">✗</td><td>✓</td></tr>
+
+          <tr class="category-row bg-light-purple" data-bs-toggle="collapse" data-bs-target=".automationsFeatures"><td colspan="5">▶ AUTOMATIONS</td></tr>
+          <tr class="collapse automationsFeatures"><td>Task Management</td><td>✗</td><td>✓</td><td class="highlight-col">✓</td><td>✓</td></tr>
+          <tr class="collapse automationsFeatures"><td>Employee Tickets</td><td>✗</td><td>✓</td><td class="highlight-col">✓</td><td>✓</td></tr>
+          <tr class="collapse automationsFeatures"><td>Communication Workflows</td><td>✓</td><td>✓</td><td class="highlight-col">✓</td><td>✓</td></tr>
+          <tr class="collapse automationsFeatures"><td>Advanced Workflows (Third-Party Integrations)</td><td>✗</td><td>✗</td><td class="highlight-col">✓</td><td>✓</td></tr>
+  
+          <tr class="category-row bg-light-purple" data-bs-toggle="collapse" data-bs-target=".reportFeatures"><td colspan="5">▶ REPORTS & INSIGHTS</td></tr>
+          <tr class="collapse reportFeatures"><td>Pre-Built Reports</td><td>✓</td><td>✓</td><td class="highlight-col">✓</td><td>✓</td></tr>
+          <tr class="collapse reportFeatures"><td>Custom / Ad hoc Reports</td><td>✗</td><td>✗</td><td class="highlight-col">✗</td><td>✓</td></tr>
+  
+        </tbody>
+      </table>
+    </div>
+  </section>
+   <!-- ADD-ONS SECTION -->
+<section class="container my-5">
+    <h2 class="fw-bold mb-4 text-center">Add-Ons</h2>
+    <div class="row g-4 justify-content-center">
+  
+      <!-- ATS -->
+      <div class="col-md-4">
+        <label class="addon-card d-block border rounded-4 p-4 shadow-sm position-relative" style="transition: border-color 0.3s; cursor: pointer;">
+          <input type="checkbox" class="addon-checkbox position-absolute top-0 end-0 m-3" style="transform: scale(1.3); z-index: 2;">
+          <div class="d-flex align-items-start gap-3">
+            <img src="https://cdn-icons-png.flaticon.com/512/5382/5382204.png" alt="ATS" style="width: 40px; height: 40px;">
+            <div>
+              <h5 class="fw-semibold mb-1">Application Tracking System</h5>
+              <p class="text-muted mb-0 small">Streamline hiring with smart applicant tracking and collaboration tools.</p>
+            </div>
+          </div>
+        </label>
+      </div>
+  
+      <!-- Accounts Payable -->
+      <div class="col-md-4">
+        <label class="addon-card d-block border rounded-4 p-4 shadow-sm position-relative" style="transition: border-color 0.3s; cursor: pointer;">
+          <input type="checkbox" class="addon-checkbox position-absolute top-0 end-0 m-3" style="transform: scale(1.3); z-index: 2;">
+          <div class="d-flex align-items-start gap-3">
+            <img src="https://cdn-icons-png.flaticon.com/512/5382/5382264.png" alt="AP" style="width: 40px; height: 40px;">
+            <div>
+              <h5 class="fw-semibold mb-1">Accounts Payable</h5>
+              <p class="text-muted mb-0 small">Automate invoice processing and expense tracking with AP workflows.</p>
+            </div>
+          </div>
+        </label>
+      </div>
+  
+      <!-- Cross Border Payments -->
+      <div class="col-md-4">
+        <label class="addon-card d-block border rounded-4 p-4 shadow-sm position-relative" style="transition: border-color 0.3s; cursor: pointer;">
+          <input type="checkbox" class="addon-checkbox position-absolute top-0 end-0 m-3" style="transform: scale(1.3); z-index: 2;">
+          <div class="d-flex align-items-start gap-3">
+            <img src="https://cdn-icons-png.flaticon.com/512/5382/5382732.png" alt="Global Payments" style="width: 40px; height: 40px;">
+            <div>
+              <h5 class="fw-semibold mb-1">Cross Border Payments</h5>
+              <p class="text-muted mb-0 small">Pay international employees and vendors quickly and securely.</p>
+            </div>
+          </div>
+        </label>
+      </div>
+  
+    </div>
+  </section>
+  
+  <!-- Card highlight style -->
+  <style>
+    .addon-card {
+      border: 2px solid #dee2e6;
+    }
+  
+    .addon-checkbox:checked ~ div {
+      border-color: #7a43ea !important;
+    }
+  
+    /* Optional JS-free styling for visual feedback */
+    .addon-checkbox:checked {
+      accent-color: #7a43ea;
+    }
+  
+    .addon-checkbox:checked:parent {
+      border-color: #7a43ea;
+    }
+  </style>
+  <!-- Add to your <head> or existing <style> tag -->
+<style>
+    .addon-card {
+      background-color: #f8f9fc;
+      transition: all 0.2s ease-in-out;
+    }
+  
+    .addon-card input[type="checkbox"]:checked ~ .card-body,
+    .addon-card input[type="checkbox"]:checked ~ .addon-icon {
+      border-color: #7a43ea;
+      background-color: #f1e8ff;
+      box-shadow: 0 0 0 2px #7a43ea1a;
+    }
+  
+    .addon-card .form-check-input {
+      z-index: 2;
+    }
+  
+    .addon-icon {
+      border: 2px solid transparent;
+      border-radius: 1rem;
+      padding: 1rem;
+      display: inline-block;
+      background-color: #ffffff;
+    }
+  </style>
+  
+  <!-- Add this inside your <head> or <style> block -->
+<style>
+    .addon-card {
+      background-color: #f9f9fb;
+      transition: all 0.3s ease-in-out;
+      border-radius: 1rem;
+    }
+  
+    .addon-card input[type="checkbox"]:checked ~ .card-body,
+    .addon-card input[type="checkbox"]:checked ~ .addon-icon {
+      border-color: #7a43ea;
+      background-color: #f1e8ff;
+      box-shadow: 0 0 0 2px rgba(122, 67, 234, 0.2);
+    }
+  
+    .addon-card .form-check-input {
+      z-index: 2;
+      border: 2px solid #ccc;
+      width: 20px;
+      height: 20px;
+    }
+  
+    .addon-icon {
+      border: 2px solid transparent;
+      border-radius: 1rem;
+      padding: 1rem;
+      display: inline-block;
+      background-color: #ffffff;
+      transition: background 0.3s ease;
+    }
+  </style>
+  
+  
+  
+  <!-- Add-on Highlighting Style -->
+  <style>
+    .addon-checkbox:checked + img,
+    .addon-checkbox:checked ~ h5,
+    .addon-checkbox:checked ~ p {
+      filter: none;
+    }
+  
+    .addon-checkbox:checked:parent {
+      border-color: #7a43ea !important;
+    }
+  
+    .addon-card {
+      border-width: 2px;
+    }
+  
+    .addon-checkbox:checked ~ * {
+      color: inherit;
+    }
+  
+    .addon-checkbox:checked {
+      outline: none;
+    }
+  
+    .addon-card input[type="checkbox"]:checked {
+      box-shadow: 0 0 0 2px #7a43ea;
+      border-color: #7a43ea;
+    }
+  
+    .addon-checkbox:checked:parent {
+      border-color: #7a43ea;
+    }
+  
+    .addon-checkbox:checked {
+      outline: none;
+    }
+  </style>
+  
+
+  
+  <style>
+    .highlight-col {
+      background-color: #efe4ff !important;
+    }
+  </style>
+  
+  
+  
+  
+  <!-- JavaScript to Rotate Icons -->
+  <script>
+  document.querySelectorAll('.category-row').forEach(row => {
+    row.addEventListener('click', function() {
+      const icon = this.querySelector('.category-icon');
+      if (icon) {
+        icon.classList.toggle('rotate-icon');
+      }
+    });
+  });
+  </script>
+  <script>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bayzat Pricing Table</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .feature-table {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+    .feature-table th,
+    .feature-table td {
+      border: none;
+      text-align: center;
+      word-break: break-word;
+      white-space: normal;
+    }
+    .feature-table th:first-child,
+    .feature-table td:first-child {
+      text-align: left;
+    }
+    .highlight-col {
+      background-color: #f4ecff;
+      border-left: 2px solid #b388f0;
+      border-right: 2px solid #b388f0;
+    }
+    .feature-table tbody tr:nth-child(even) td {
+      background-color: #f9f9f9;
+    }
+    .feature-table tbody tr:nth-child(odd) td {
+      background-color: #ffffff;
+    }
+    .feature-category-row {
+      background-color: #f4ecff !important;
+      font-weight: 600;
+      color: #4a2960;
+    }
+    .rotate-icon {
+      transform: rotate(90deg);
+    }
+    .hero-section {
+      background-color: #7a43ea;
+      color: white;
+    }
+    .badge-promo {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    .price-value {
+      font-size: 1.25rem;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+    .price-unit {
+      font-size: 0.875rem;
+      color: #6c757d;
+    }
+    .addon-card {
+      border: 2px solid #dee2e6;
+      background-color: #f9f9fb;
+      transition: all 0.3s ease-in-out;
+      border-radius: 1rem;
+    }
+    .addon-checkbox:checked ~ div {
+      border-color: #7a43ea !important;
+    }
+    .addon-checkbox:checked {
+      accent-color: #7a43ea;
+    }
+    @media (max-width: 768px) {
+      .feature-table thead tr {
+        flex-direction: column !important;
+      }
+      .feature-table thead tr th {
+        width: 100% !important;
+        margin-bottom: 1rem;
+      }
+    }
+    @media print {
+      .feature-table th,
+      .feature-table td {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero-section text-center py-5">
+    <div class="container">
+      <h1 class="fw-bold">Choose the Perfect Plan for Your Needs</h1>
+      <p>Transparent pricing with no hidden fees. All plans include core features with premium options for growing businesses.</p>
+      <div class="badge-promo px-4 py-2 rounded-pill d-inline-block fw-semibold">
+        Save up to 20% with multi-year contract
+      </div>
+    </div>
+  </section>
+
+  <!-- Employee Count Selector -->
+  <section class="py-4 bg-white border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap gap-3 align-items-center">
+        <label for="employeeCount" class="form-label fw-semibold mb-0">Employee Count</label>
+        <select id="employeeCount" class="form-select rounded-pill px-3 py-2 shadow-sm border-secondary" style="width: 120px;">
+          <option>1 - 10</option>
+          <option>11 - 25</option>
+          <option>26 - 50</option>
+          <option>51 - 100</option>
+          <option>101 - 150</option>
+          <option>151 - 200</option>
+          <option>201 - 300</option>
+          <option>301 - 500</option>
+          <option>501+</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+         
+  
+         <script>
+          function downloadPDF() {
+            // Expand all collapsed sections temporarily
+            const collapsibles = document.querySelectorAll('.collapse');
+            collapsibles.forEach(el => el.classList.add('show'));
+          
+            setTimeout(() => {
+              // Create a wrapper and apply .pdf-mode class
+              const element = document.createElement('div');
+              element.setAttribute('id', 'pdf-wrapper');
+              element.classList.add('pdf-mode');
+              element.style.padding = '20px';
+              element.style.background = '#fff';
+              element.style.width = '100%';
+              element.style.overflow = 'visible';
+          
+              // Clone summary and table content
+              const summary = document.getElementById('pdf-summary').cloneNode(true);
+              const table = document.querySelector('.pricing-table-container').cloneNode(true);
+              element.appendChild(summary);
+              element.appendChild(table);
+          
+              document.body.appendChild(element); // Append to DOM so html2pdf can render
+          
+              const opt = {
+                margin: 0.5,
+                filename: 'pricing-table.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: {
+                  scale: 2,
+                  scrollY: 0,
+                  windowWidth: element.scrollWidth,
+                  windowHeight: element.scrollHeight
+                },
+                jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' } // Landscape for wide tables
+              };
+          
+              html2pdf().set(opt).from(element).save().then(() => {
+                // Cleanup
+                document.getElementById('pdf-wrapper')?.remove();
+                collapsibles.forEach(el => el.classList.remove('show'));
+              });
+            }, 300); // wait for layout to apply
+          }
+          </script>
+          
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      // Trigger pricing based on default employee count
+      document.getElementById("employeeCount").dispatchEvent(new Event("change"));
+  
+      // Show all accordion sections by default
+      document.querySelectorAll('.collapse').forEach(el => el.classList.add('show'));
+  
+      // Rotate all accordion arrows to match the open state
+      document.querySelectorAll('.category-icon').forEach(icon => icon.classList.add('rotate-icon'));
+    });
+  </script>
+  <script>
+    const pricingMap = {
+      "1 - 10":      { prices: [3500, 4200, 5000, 7500], type: "annual" },
+      "11 - 25":     { prices: [7500, 9000, 10800, 16200], type: "annual" },
+      "26 - 50":     { prices: [12000, 14500, 17400, 26100], type: "annual" },
+      "51 - 100":    { prices: [23, 28, 36, 54], type: "monthly" },
+      "101 - 150":   { prices: [17, 21, 27, 40], type: "monthly" },
+      "151 - 200":   { prices: [15, 19, 24, 35], type: "monthly" },
+      "201 - 300":   { prices: [9, 10, 12, 17], type: "monthly" },
+      "301 - 500":   { prices: [6, 8, 10, 13], type: "monthly" },
+      "501+":        { prices: [4, 6, 7, 9], type: "monthly" }
+    };
+  
+    function formatPrice(price, type) {
+      const unitStyle = 'font-size: 0.75rem; color: #6c757d;';
+      if (type === "annual") {
+        return `<div class="price-value">AED${price.toLocaleString()}</div><div class="price-unit" style="${unitStyle}">per year</div>`;
+      } else {
+        return `<div class="price-value">AED${price}</div><div class="price-unit" style="${unitStyle}">per employee / month</div>`;
+      }
+    }
+  
+    document.getElementById("employeeCount").addEventListener("change", function () {
+      const selectedRange = this.value.trim();
+      const plan = pricingMap[selectedRange];
+      if (!plan) return;
+  
+      const pricingElements = document.querySelectorAll(".plan-price");
+      plan.prices.forEach((price, idx) => {
+        pricingElements[idx].innerHTML = formatPrice(price, plan.type);
+      });
+    });
+  
+    window.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("employeeCount").dispatchEvent(new Event("change"));
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+    new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+</script>
+
+  </body>
+  
+  
+  
+  </body>
+  
+  </html>
+  
