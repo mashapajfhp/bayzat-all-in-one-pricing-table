@@ -1,0 +1,174 @@
+/* General Typography */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hero Section Styling */
+.hero-section {
+  background: linear-gradient(to bottom, #9647FF 0%, #f9f4ff 100%);
+  color: white;
+}
+.hero-section .lead {
+  font-size: 1.125rem;
+  color: #f1e9ff;
+}
+.hero-section .badge-pill {
+  font-size: 0.95rem;
+  background-color: #ffffff33;
+  border-radius: 999px;
+}
+
+/* Table Container */
+.pricing-table-container {
+  max-height: 75vh;
+  overflow-y: auto;
+  border-top: 1px solid #ddd;
+  margin-top: 0;
+  padding-top: 0;
+}
+.pricing-table-container table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+/* Sticky Table Header */
+.sticky-header th {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+.table.feature-table th {
+  text-align: center;
+  vertical-align: top;
+}
+
+/* Table Cell Defaults */
+.feature-table th,
+.feature-table td {
+  border: none !important;
+  padding: 0.5rem;
+}
+
+/* Zebra Striping – Excludes category rows */
+.feature-table tbody tr:not(.feature-category-row):not(.category-row):nth-child(even) td {
+  background-color: #f9f9f9;
+}
+.feature-table tbody tr:not(.feature-category-row):not(.category-row):nth-child(odd) td {
+  background-color: #ffffff;
+}
+
+/* Hover Effect */
+tr:hover td {
+  background-color: #f9f9f9;
+}
+
+/* Highlighted Plan Column */
+.highlight-col {
+  background-color: #f4ecff;
+  border-left: 2px solid #b388f0;
+  border-right: 2px solid #b388f0;
+}
+.highlight-col .btn {
+  background-color: #7a43ea;
+  color: white;
+  border: none;
+}
+
+/* Feature Category Row */
+.category-row {
+  cursor: pointer;
+  text-align: left;
+  background-color: #f8f9fa; /* fallback for other types */
+}
+
+/* Ensure feature-category-row overrides zebra striping and category-row */
+.category-row.feature-category-row {
+  background-color: #f4ecff !important;
+  color: #4a2960 !important;
+  font-weight: 600 !important;
+}
+
+/* Icons */
+.category-icon {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.rotate-icon {
+  transform: rotate(90deg);
+}
+
+/* Buttons */
+th .btn,
+td .btn {
+  border-radius: 999px;
+  padding: 0.4rem 1.2rem;
+}
+
+/* Pricing Display */
+.pricing .price-value {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.pricing .price-unit {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .feature-table th {
+    min-width: 100%;
+  }
+  .table-responsive {
+    padding-bottom: 1rem;
+  }
+}
+
+/* PDF Mode Tweaks */
+.pdf-mode .pricing-table-container {
+  overflow: visible !important;
+  max-height: none !important;
+}
+.pdf-mode table.feature-table {
+  table-layout: auto !important;
+  width: 100% !important;
+  word-break: break-word;
+}
+.pdf-mode th,
+.pdf-mode td {
+  white-space: normal !important;
+}
+
+/* Print Mode */
+@media print {
+  body {
+    font-size: 0.9rem;
+  }
+  .feature-table th,
+  .feature-table td {
+    padding: 0.4rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Show/hide for PDF */
+.print-only {
+  display: none;
+}
+.pdf-mode .print-only {
+  display: block !important;
+}
+table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  
